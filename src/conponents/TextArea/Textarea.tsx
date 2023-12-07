@@ -20,14 +20,28 @@ const TextArea = () => {
   );
 };
 
+// const Heard = () => {
+//   return (
+//     <>
+//       <Box display="flex" justifyContent="start">
+//         <FavoriteBorderIcon style={{ margin: 0 , color: "#FFFFFF"}} />
+//         <FavoriteBorderIcon style={{ margin: 0, color: "#FFFFFF" }} />
+//         <FavoriteBorderIcon style={{ margin: 0 , color: "#FFFFFF"}} />
+//         <FavoriteBorderIcon style={{ margin: 0, color: "#FFFFFF" }} />
+//       </Box>
+//     </>
+//   );
+// };
+
 const Heard = () => {
+  const iconsArray = Array.from({ length: 4 });
+
   return (
     <>
       <Box display="flex" justifyContent="start">
-        <FavoriteBorderIcon style={{ margin: 0 , color: "#FFFFFF"}} />
-        <FavoriteBorderIcon style={{ margin: 0, color: "#FFFFFF" }} />
-        <FavoriteBorderIcon style={{ margin: 0 , color: "#FFFFFF"}} />
-        <FavoriteBorderIcon style={{ margin: 0, color: "#FFFFFF" }} />
+        {iconsArray.map((_, index) => (
+          <FavoriteBorderIcon key={index} style={{ margin: 0, color: "#FFFFFF" }} />
+        ))}
       </Box>
     </>
   );
